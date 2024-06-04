@@ -1,8 +1,9 @@
 import { Outlet, Navigate } from "react-router-dom";
+import Navbar from "./NavBar";
+import { employeeLinks } from "./SideBarLinks";
+import Sidebar from "./SideBar";
 import { useStateContext } from "../contexts/ContextProvider";
 import { useState, useEffect } from 'react';
-import EmpSidebar from "./EmpSideBar";
-import Navbar from "./NavBar";
 
 function EmpLayout() {
     const { userToken } = useStateContext();
@@ -33,7 +34,7 @@ function EmpLayout() {
     return (
         <div className={`App ${darkMode ? 'dark' : ''}`}>
             <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
-            <EmpSidebar />
+            <Sidebar links={employeeLinks} />
             <div className="p-4 sm:ml-64">
                 <div className="p-4 border-2 border-gray-200 border-solid rounded-lg dark:border-gray-700 mt-14">
                     <Outlet />
