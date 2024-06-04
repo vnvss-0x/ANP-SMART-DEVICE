@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the code for the ANP-SMART-DEVICE Management System, developed as part of a final year project at the Agence Nationale des Ports (ANP). The system is designed to efficiently manage and monitor IT devices within the organization.
+This repository contains the code for the ANP-SMART-DEVICE Management System, developed as part of my final year project at the Agence Nationale des Ports (ANP). The system is designed to efficiently manage and monitor IT devices within the organization.
 
 ## Table of Contents
 - [Overview](#overview)
