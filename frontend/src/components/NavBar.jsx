@@ -3,10 +3,8 @@ import { useStateContext } from "../contexts/ContextProvider"; // Adjust the imp
 import AnpLogo from "../assets/anp-logo.svg";
 import DarkThemeIcon from "../assets/dark-theme-btn.svg";
 import DarkThemeIconGray from "../assets/dark-theme-btn-gray.svg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = ({ toggleDarkMode, darkMode }) => {
     const { currentUser, userToken } = useStateContext();
@@ -55,7 +53,12 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                             onClick={toggleDarkMode}
                             className="px-2 py-2 h-10 w-10"
                         >
-                            <img src={darkMode ? DarkThemeIconGray : DarkThemeIcon} alt="Dark Mode Icon" />
+                            <img
+                                src={
+                                    darkMode ? DarkThemeIconGray : DarkThemeIcon
+                                }
+                                alt="Dark Mode Icon"
+                            />
                         </button>
                         <div className="flex items-center ms-3">
                             <div>
@@ -65,34 +68,61 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
                                     aria-expanded="false"
                                     data-dropdown-toggle="dropdown-user"
                                 >
-                                    <span className="sr-only">Open user menu</span>
-                                    {/* <img
-                                        className="w-8 h-8 rounded-full"
-                                        src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-                                        alt="user photo"
-                                    /> */}
-                                                            <FontAwesomeIcon  icon={faUser} className="px-2 py-2 h-6 w-6 bg-transparent rounded-full dark:bg-transparent" style={{color: "#9ca3af",}} />
-
+                                    <span className="sr-only">
+                                        Open user menu
+                                    </span>
+                                    <FontAwesomeIcon
+                                        icon={faUser}
+                                        className="px-2 py-2 h-6 w-6 bg-transparent rounded-full dark:bg-transparent"
+                                        style={{ color: "#9ca3af" }}
+                                    />
                                 </button>
                             </div>
-                            <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
+                            <div
+                                className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                                id="dropdown-user"
+                            >
                                 <div className="px-4 py-3" role="none">
-                                    <p className="text-sm text-gray-900 dark:text-white" role="none">
+                                    <p
+                                        className="text-sm text-gray-900 dark:text-white"
+                                        role="none"
+                                    >
                                         {currentUser.name}
                                     </p>
-                                    <p className="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                                    <p
+                                        className="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                                        role="none"
+                                    >
                                         {currentUser.email}
                                     </p>
                                 </div>
                                 <ul className="py-1" role="none">
                                     <li>
-                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a>
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            role="menuitem"
+                                        >
+                                            Dashboard
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Settings</a>
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            role="menuitem"
+                                        >
+                                            Settings
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Logout</a>
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            role="menuitem"
+                                        >
+                                            Logout
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

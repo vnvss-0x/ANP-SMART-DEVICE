@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function EmpMaintenaceRequest() {
   const [claim, setClaim] = useState({

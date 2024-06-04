@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComputer, faUser } from '@fortawesome/free-solid-svg-icons';
 
 
-const Sidebar = () => {
+const SideBar = () => {
     return (
         <aside
             id="logo-sidebar"
@@ -60,7 +60,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <NavLink
-                            to="Maintainance"
+                            to="Maintenance"
                             style={({ isActive }) => ({
                                 background: isActive ? "#0284C7" : "",
                             })}
@@ -85,4 +85,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default SideBar;

@@ -4,14 +4,14 @@ import Login from "./views/Login";
 import DefaultLayout from "./components/DefaultLayout";
 import GuestLayout from "./components/GuestLayout";
 import Devices from "./views/Devices";
-import Maintainance from "./views/Maintainance";
+import Maintenance from "./views/Maintenance";
 import Users from "./views/Users";
 import UserList from "./components/UserList";
 import ListDevices from "./components/DevicesList";
 import DeviceEditForm from "./components/DeviceEditForm";
 import DeviceCreateForm from "./components/DeviceCreateForm";
 import EmpLayout from "./components/EmpLayout";
-import EmpMaintenaceRequest from "./components/EmpMaintenanceRequest";
+import EmpMaintenanceRequest from "./components/EmpMaintenanceRequest";
 import EmpHome from "./components/EmpHome";
 import EmpProfile from "./components/EmpProfile";
 
@@ -21,15 +21,15 @@ const router = createBrowserRouter([
         element: <DefaultLayout />,
         children: [
             {
-                path: "/",
-                element: <Navigate to="/dashboard" />,
+                path: "",
+                element: <Navigate to="/admin/dashboard" />,
             },
             {
-                path: "/dashboard",
+                path: "dashboard",
                 element: <Dashboard />,
             },
             {
-                path: "/users",
+                path: "users",
                 element: <Users />,
                 children: [
                     {
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
                 ],
             },
             {
-                path: "/devices",
+                path: "devices",
                 element: <Devices />,
                 children: [
                     {
@@ -57,8 +57,8 @@ const router = createBrowserRouter([
                 ],
             },
             {
-                path: "/maintainance",
-                element: <Maintainance />,
+                path: "maintenance",
+                element: <Maintenance />,
             },
         ],
     },
@@ -67,14 +67,13 @@ const router = createBrowserRouter([
         element: <GuestLayout />,
         children: [
             {
-                path: "/login",
+                path: "login",
                 element: <Login />,
             },
         ],
     },
-
     {
-        path: "/Employee",
+        path: "/employee",
         element: <EmpLayout />,
         children: [
             {
@@ -82,14 +81,17 @@ const router = createBrowserRouter([
                 element: <EmpHome />,
             },
             {
-                path: "MaintenaceRequest",
-                element: <EmpMaintenaceRequest />,
+                path: "maintenance-request",
+                element: <EmpMaintenanceRequest />,
             },
             {
-                path: "Profile",
+                path: "profile",
                 element: <EmpProfile />,
             },
         ],
     },
+    // Fallback route for undefined paths
+    
 ]);
+
 export default router;

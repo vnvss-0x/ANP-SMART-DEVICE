@@ -1,6 +1,6 @@
 import PageComponent from "../components/PageComponent"
 
-function Maintainance() {
+function Maintenance() {
   return (
     <>
     <PageComponent title="Maintainance">
@@ -10,4 +10,4 @@ function Maintainance() {
   )
 }
 
-export default Maintainance
+export default Maintenance

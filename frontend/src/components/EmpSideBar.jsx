@@ -60,7 +60,7 @@ const EmpSidebar = () => {
                     </li>
                     <li>
                         <NavLink
-                            to="MaintenaceRequest"
+                            to="maintenance-request"
                             style={({ isActive }) => ({
                                 background: isActive ? "#0284C7" : "",
                             })}

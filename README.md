@@ -61,6 +61,7 @@ This repository contains the code for the ANP-SMART-DEVICE Management System, de
 4. **Set up the database:**
    - Copy the example environment file and modify it:
      ```bash
+     cd ..
      cp .env.example .env
      ```
    - Configure the database connection in the `.env` file.

@@ -95,7 +95,7 @@ function DeviceList() {
     };
 
     const handleCreateDeviceClick = () => {
-        navigate("/devices/new");
+        navigate("/admin/devices/new");
     };
 
     return (
